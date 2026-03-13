@@ -28,9 +28,11 @@ const Home = () => {
   return (
     <>
       <section>
+        <h1>SublimeNoir</h1>
+        <h1>Whispered allure, where elegance meets the exotic</h1>
         {data.map((product) => (
           <div className="card" key={product.id}>
-            <h2>{product.name}</h2>
+            <h2 className="text-3xl font-bold underline">{product.name}</h2>
             <p>
               <strong>Brand:</strong> {product.brand}
             </p>
