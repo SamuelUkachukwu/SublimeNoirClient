@@ -18,3 +18,34 @@ html {
   font-size: 14px !important;
   font-family: "Montserrat", sans-serif !important;
 }
+
+.light {
+  position: absolute;
+  border-radius: 50%;
+  animation: glow 5s infinite alternate;
+}
+
+.moveHorizontal {
+  animation: moveHorizontal 5s infinite alternate;
+  box-shadow: 0 0 20px rgb(255, 255, 0), 0 0 70px rgb(255, 165, 0), 0 0 90px rgb(255, 69, 0);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgb(255, 255, 0), 0 0 20px rgb(255, 165, 0), 0 0 30px rgb(255, 69, 0);
+  }
+
+  to {
+    box-shadow: 0 0 20px rgb(255, 255, 0), 0 0 100px rgb(255, 165, 0), 0 0 160px rgb(255, 69, 0);
+  }
+}
+
+@keyframes moveHorizontal {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(40px);
+  }
+}

@@ -1,6 +1,7 @@
 // import axios from "axios";
 import React, { useEffect, useState } from "react";
 import apiClient from "../api/axiosConfig";
+import StreetLight from "../components/StreetLight";
 
 interface Product {
   id: number;
@@ -27,9 +28,19 @@ const Home = () => {
   }, []);
   return (
     <>
+      <section className="w-full h-screen overflow-hidden">
+        <StreetLight />
+        <div className="flex flex-col items-center justify-center w-full h-screen">
+          <h1 className="text-white text-[205px] font-[kesiq] drop-shadow-lg">
+            SublimeNoir
+          </h1>
+          <h2 className="text-white flex text-4xl text-center">
+            Whispered allure, where elegance meets the exotic
+          </h2>
+        </div>
+      </section>
+
       <section>
-        <h1>SublimeNoir</h1>
-        <h1>Whispered allure, where elegance meets the exotic</h1>
         {data.map((product) => (
           <div className="card" key={product.id}>
             <h2 className="text-3xl font-bold underline">{product.name}</h2>
