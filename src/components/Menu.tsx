@@ -6,6 +6,7 @@ type MenuProps = {
 };
 
 const Menu: React.FC<MenuProps> = ({ isOpen, setIsOpen }) => {
+  
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 767 && isOpen) {
