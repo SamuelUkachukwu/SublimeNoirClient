@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MobileNavAdmin = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,22 +71,12 @@ const MobileNavAdmin = () => {
         <div className="bg-red-200 flex-col flex p-6 h-full">
           <nav className="pt-30">
             <ul className="space-y-3">
-              <li>
-                <a href="">Products</a>
-              </li>
-              <li>
-                <a href="">Users</a>
-              </li>
-              <li>
-                <a href="">Orders</a>
-              </li>
-              <li>
-                <a href="">Order items</a>
-              </li>
-              <li>
-                <a href="">Create an order</a>
-              </li>
-            </ul>
+                <li><Link onClick={closeMenu} to="/admin/products">Products</Link></li>
+                <li><Link onClick={closeMenu} to="/admin/users">Users</Link></li>
+                <li><Link onClick={closeMenu} to="/admin/orders">Orders</Link></li>
+                <li><Link onClick={closeMenu} to="#">Order items</Link></li>
+                <li><Link onClick={closeMenu} to="#/">Create an order</Link></li>
+              </ul>
           </nav>
           <div className="mt-auto flex flex-col space-y-3">
             <span>User profile</span>

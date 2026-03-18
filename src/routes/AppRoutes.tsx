@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Legal from "../pages/Legal";
 import NoPage from "../pages/NoPage";
 import Admin from "../admin/Admin";
+// import ProductDetailAdmin from "../admin/ProductDetailAdmin";
 
 const AppRoutes = () => {
 
@@ -21,6 +22,8 @@ const AppRoutes = () => {
         {/* Admin  */}
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin/:activeMenuItem" element={<Admin/>} />
+        <Route path="/admin/:activeMenuItem/:id?" element={<Admin />} />
+        {/* <Route path="/admin/products/:id" element={<ProductDetailAdmin />} /> */}
 
         {/* legal Routes */}
         <Route path="/legal/:docType" element={<Legal />} />

@@ -39,16 +39,13 @@ const OrderPageAdmin = () => {
   return (
     <div className="bg-white rounded-xl shadow-md border flex flex-col">
       
-     {/* Table Title */}
       <div className="px-6 py-4 border-b">
         <h2 className="text-lg font-semibold">Orders</h2>
       </div>
 
-      {/* Table */}
       <div className="flex-1 overflow-auto">
         <table className="w-full text-sm">
 
-          {/* Header */}
           <thead className="bg-gray-50 text-gray-600">
             <tr>
               <th className="px-4 py-3 text-left">Order ID</th>
@@ -62,7 +59,6 @@ const OrderPageAdmin = () => {
             </tr>
           </thead>
 
-          {/* Rows */}
           <tbody>
             {data.map((order) => (
               <tr key={order.orderId} className="border-t hover:bg-gray-50">
