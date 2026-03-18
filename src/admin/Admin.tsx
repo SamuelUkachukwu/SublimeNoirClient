@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import MobileNavAdmin from "./MobileNavAdmin";
 import ProductPageAdmin from "./product_admin/ProductPageAdmin";
-import UserPageAdmin from "./UserPageAdmin";
+import UserPageAdmin from "./user_admin/UserPageAdmin";
 import OrderPageAdmin from "./OrderPageAdmin";
 import Search from "./Search";
 import EditProduct from "./product_admin/EditProduct";
 import AddProduct from "./product_admin/AddProduct";
-import EditUser from "./EditUser";
+import EditUser from "./user_admin/EditUser";
+import AddUser from "./user_admin/AddUser";
 
 const Admin = () => {
   const { activeMenuItem, id } = useParams<{
@@ -33,7 +34,7 @@ const Admin = () => {
       case "add-product":
         return <AddProduct />;
       case "add-user":
-        return <AddProduct />;
+        return <AddUser />;
       default:
         return <ProductPageAdmin />;
     }
