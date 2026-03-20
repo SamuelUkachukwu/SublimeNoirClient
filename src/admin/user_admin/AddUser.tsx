@@ -43,12 +43,12 @@ const AddUser = () => {
   return (
     <div className="w-full h-full bg-red-300 flex flex-col items-center justify-center">
       <div className="mb-9">
-        <h1 className="font-bold">Edit User</h1>
+        <h1 className="font-bold">Add User</h1>
       </div>
 
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-lg shadow-md w-[90%]"
+        className="bg-blue-200 p-6 rounded-lg shadow-md lg:w-[60%]"
       >
         {/* <input type="hidden" name="id" value={formData.id} /> */}
 
@@ -58,7 +58,7 @@ const AddUser = () => {
           </label>
           <input
             type="text"
-            className="w-full border rounded border-black"
+            className="w-full border rounded border-black bg-white p-2"
             id="username"
             name="username"
             value={formData.username}
@@ -74,7 +74,7 @@ const AddUser = () => {
           </label>
           <input
             type="email"
-            className="w-full border rounded border-black"
+            className="w-full border rounded border-black bg-white p-2"
             id="email"
             name="email"
             value={formData.email}
@@ -90,7 +90,7 @@ const AddUser = () => {
           </label>
           <input
             type="text"
-            className="w-full border rounded border-black"
+            className="w-full border rounded border-black bg-white p-2"
             id="firstName"
             name="firstName"
             value={formData.firstName}
@@ -106,7 +106,7 @@ const AddUser = () => {
           </label>
           <input
             type="text"
-            className="w-full border rounded border-black"
+            className="w-full border rounded border-black bg-white p-2"
             id="lastName"
             name="lastName"
             value={formData.lastName}
@@ -117,7 +117,10 @@ const AddUser = () => {
         </div>
 
         <div className="mb-6">
-          <button type="submit" className="rounded font-bold p-4 bg-green-400 cursor-pointer">
+          <button
+            type="submit"
+            className="rounded font-bold p-4 bg-green-900 cursor-pointer text-white hover:bg-green-500 hover:text-black"
+          >
             Submit
           </button>
         </div>

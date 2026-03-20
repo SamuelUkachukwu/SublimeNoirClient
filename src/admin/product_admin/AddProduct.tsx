@@ -44,14 +44,14 @@ const AddProduct = () => {
 };
 
   return (
-    <div className="w-full h-full bg-red-300 flex flex-col items-center justify-center">
+    <div className="w-full h-full flex flex-col items-center justify-center">
   <div className="mb-9">
     <h1 className="font-bold">Add Product</h1>
   </div>
 
   <form
     onSubmit={handleSubmit}
-    className="bg-white p-6 rounded-lg shadow-md w-[90%]"
+    className="p-6 rounded-lg shadow-md lg:w-[60%] bg-blue-200"
   >
     <div className="mb-6">
       <label htmlFor="productName" className="block text-sm font-medium mb-1">
@@ -59,7 +59,7 @@ const AddProduct = () => {
       </label>
       <input
         type="text"
-        className="w-full border rounded border-black"
+        className="w-full border rounded border-black bg-white p-2"
         id="productName"
         name="name"
         value={formData.name}
@@ -73,7 +73,7 @@ const AddProduct = () => {
       </label>
       <input
         type="text"
-        className="w-full border rounded border-black"
+        className="w-full border rounded border-black bg-white p-2"
         id="productBrand"
         name="brand"
         value={formData.brand}
@@ -89,7 +89,7 @@ const AddProduct = () => {
       </label>
       <input
         type="number"
-        className="w-full border rounded border-black"
+        className="w-full border rounded border-black bg-white p-2"
         id="productPrice"
         name="price"
         value={formData.price}
@@ -105,7 +105,7 @@ const AddProduct = () => {
       </label>
       <input
         type="number"
-        className="w-full border rounded border-black"
+        className="w-full border rounded border-black bg-white p-2"
         id="productSize"
         name="sizeML"
         value={formData.sizeML}
@@ -121,7 +121,7 @@ const AddProduct = () => {
       </label>
       <input
         type="number"
-        className="w-full border rounded border-black"
+        className="w-full border rounded border-black bg-white p-2"
         id="productQuantity"
         name="quantity"
         value={formData.quantity}
@@ -134,7 +134,7 @@ const AddProduct = () => {
     <div className="mb-6">
       <button
         type="submit"
-        className="rounded font-bold p-4 bg-green-400 cursor-pointer"
+        className="rounded font-bold p-4 bg-green-900 cursor-pointer text-white hover:bg-green-500 hover:text-black"
       >
         Add Product
       </button>

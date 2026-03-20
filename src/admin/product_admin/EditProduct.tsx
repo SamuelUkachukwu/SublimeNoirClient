@@ -80,7 +80,7 @@ const EditProduct: React.FC<EditProductProps> = ({ productId }) => {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-lg shadow-md w-[90%] bg-blue-400"
+        className="p-6 rounded-lg shadow-md lg:w-[60%] bg-blue-200"
       >
         <input type="hidden" name="productId" value={formData.productId} />
         <div className="mb-6">
@@ -92,7 +92,7 @@ const EditProduct: React.FC<EditProductProps> = ({ productId }) => {
           </label>
           <input
             type="text"
-            className="w-full border rounded border-black"
+            className="w-full border rounded border-black bg-white p-2"
             id="productName"
             name="name"
             value={formData.name}
@@ -108,7 +108,7 @@ const EditProduct: React.FC<EditProductProps> = ({ productId }) => {
           </label>
           <input
             type="text"
-            className="w-full border rounded border-black"
+            className="w-full border rounded border-black bg-white p-2"
             id="productBrand"
             name="brand"
             value={formData.brand}
@@ -126,7 +126,7 @@ const EditProduct: React.FC<EditProductProps> = ({ productId }) => {
           </label>
           <input
             type="text"
-            className="w-full border rounded border-black"
+            className="w-full border rounded border-black bg-white p-2"
             id="productPrice"
             name="price"
             value={formData.price}
@@ -144,7 +144,7 @@ const EditProduct: React.FC<EditProductProps> = ({ productId }) => {
           </label>
           <input
             type="text"
-            className="w-full border rounded border-black"
+            className="w-full border rounded border-black bg-white p-2"
             id="productSize"
             name="sizeML"
             value={formData.sizeML}
@@ -162,7 +162,7 @@ const EditProduct: React.FC<EditProductProps> = ({ productId }) => {
           </label>
           <input
             type="text"
-            className="w-full border rounded border-black"
+            className="w-full border rounded border-black bg-white p-2"
             id="productQuantity"
             name="quantity"
             value={formData.quantity}
@@ -172,7 +172,10 @@ const EditProduct: React.FC<EditProductProps> = ({ productId }) => {
           />
         </div>
         <div className="mb-6">
-          <button type="submit" className="rounded font-bold p-4 bg-green-400 cursor-pointer">
+          <button
+            type="submit"
+            className="rounded font-bold p-4 bg-green-900 cursor-pointer text-white hover:bg-green-500 hover:text-black"
+          >
             Submit
           </button>
         </div>
