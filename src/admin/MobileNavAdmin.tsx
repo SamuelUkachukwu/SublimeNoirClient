@@ -74,7 +74,7 @@ const MobileNavAdmin = () => {
                 <li><Link onClick={closeMenu} to="/admin/products">Products</Link></li>
                 <li><Link onClick={closeMenu} to="/admin/users">Users</Link></li>
                 <li><Link onClick={closeMenu} to="/admin/orders">Orders</Link></li>
-                <li><Link onClick={closeMenu} to="#">Order items</Link></li>
+                {/* <li><Link onClick={closeMenu} to="#">Order items</Link></li> */}
                 <li><Link onClick={closeMenu} to="#/">Create an order</Link></li>
               </ul>
           </nav>

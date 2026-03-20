@@ -9,6 +9,7 @@ import EditProduct from "./product_admin/EditProduct";
 import AddProduct from "./product_admin/AddProduct";
 import EditUser from "./user_admin/EditUser";
 import AddUser from "./user_admin/AddUser";
+import CreatOrderAdmin from "./CreatOrderAdmin";
 
 const Admin = () => {
   const { activeMenuItem, id } = useParams<{
@@ -35,6 +36,8 @@ const Admin = () => {
         return <AddProduct />;
       case "add-user":
         return <AddUser />;
+      case "create-order":
+        return <CreatOrderAdmin />;
       default:
         return <ProductPageAdmin />;
     }
@@ -64,11 +67,11 @@ const Admin = () => {
                 <li>
                   <Link to="/admin/orders">Orders</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="#">Order items</Link>
-                </li>
+                </li> */}
                 <li>
-                  <Link to="#/">Create an order</Link>
+                  <Link to="/admin/create-order">Create an order</Link>
                 </li>
               </ul>
             </nav>
